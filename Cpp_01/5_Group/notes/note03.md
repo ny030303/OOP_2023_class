@@ -2,8 +2,6 @@
 
 # 내용 정리
 
----
-
 ## I. C++ 클래스 만드는 방법
 
 1. **class (이름) {     }** 이런식으로 클래스 이름을 작성한다.
@@ -34,13 +32,13 @@
 - **생성자는 꼭 있어야 한다.**
 - ⇒ 만들지 않으면 컴파일러가 기본 생성자를 자동으로 생성한다.
 
-### 토론주제: 기본 생성자가 자동으로 생성되지 않은 경우
+## 토론주제: 기본 생성자가 자동으로 생성되지 않은 경우
 
 → 기본생성자가 생기지 않을것이다. 기본 생성자는 아무 생성자를 만들지 않았을때 생성이 된다. 따라서 donut 객체를 생성할때 존재하지 않는 생성자로 오류가 날 것.
 
 ex. 
 
-```
+```cpp
 class Circle {
 public:
 	int radius;
@@ -87,7 +85,7 @@ int main() {
 
 ⇒ 전역 객체 삭제(1000, 2000)
 
-```
+```cpp
 Circle globalDonut(1000);
 Circle globalPizza(2000);
 void f() {
@@ -129,7 +127,7 @@ f();
 
 ⇒ 조건 컴파일로 해결할 수 있다. 
 
-```
+```cpp
 **#ifndef CIRCLE_H
 #define CIRCLE_H**
 class Circle {
@@ -143,15 +141,11 @@ public:
 **#endif**
 ```
 
-## 156p 코드 제출 과제
-
 # 예제 정리
 
 ## 예제 3-1 Circle - 클래스의 객체 생성 및 활용
 
----
-
-```
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -176,9 +170,7 @@ int main() {
 
 ## 예제 3-2(실습) – Rectangle 클래스 만들기
 
----
-
-```
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -203,7 +195,7 @@ int main() {
 
 ## 예제3-3 - 2 개의 생성자를 가진 Circle 클래스
 
-```
+```cpp
 #include <iostream> 
 using namespace std;
 
@@ -242,9 +234,7 @@ int main() {
 
 ## 예제 3-4 생성자에서 다른 생성자 호출 연습
 
----
-
-```
+```cpp
 lass Circle {
 public:
 	int radius;
@@ -276,9 +266,7 @@ int main() {
 
 ## 예제 3-6(실습) – Rectangle 클래스 만들기
 
----
-
-```
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -311,7 +299,7 @@ int main() {
 }
 ```
 
-```
+```cpp
 #include <iost#include <iostream> 
 using namespace std;
 
@@ -376,4 +364,65 @@ int main() {
 	if (rect2.isSquare()) cout << "rect2는 정사각형이다." << endl;
 	if (rect3.isSquare()) cout << "rect3는 정사각형이다." << endl;
 }
+```
+
+# 156p 코드 제출 과제 - 답안
+
+main.cpp
+
+```cpp
+#include <iostream>
+#include "Ram.h"
+using namespace std;
+
+int main() {
+	Ram ram;
+	ram.write(100, 20);
+	ram.write(101, 30);
+	char res = ram.read(100) + ram.read(101); // 20 + 30 = 50
+	ram.write(102, res);
+	cout << "102 번지의 값 = " << (int)ram.read(102) << endl;
+	
+}
+```
+
+Ram.cpp
+
+```cpp
+#include <iostream>
+using namespace std;
+#include "Ram.h" 
+
+Ram::Ram()
+{
+}
+
+Ram::~Ram() {
+	cout << "메모리 제거됨" << endl;
+}
+
+char Ram::read(int address)
+{
+	return mem[address];
+}
+
+void Ram::write(int address, char value)
+{
+	mem[address] = value;
+}
+```
+
+Ram.h
+
+```cpp
+class Ram {
+	char mem[100 * 1024];
+	int size;
+public:
+	Ram();
+	~Ram();
+	char read(int address);
+	void write(int address, char value);
+
+};
 ```
