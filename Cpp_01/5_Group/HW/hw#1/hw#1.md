@@ -6,15 +6,15 @@
 
 ### 교제 p156 - 12번
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e95c42dc-313f-4f4c-b7c7-e4e32f0dbb9b/5766d217-8eea-4c2c-9c1c-8823dcb22f38/Untitled.png)
+![Untitled](image/Untitled1.png)
 
 ### 실제 폴더 구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e95c42dc-313f-4f4c-b7c7-e4e32f0dbb9b/392aa292-053e-4e6f-8a0f-b0c43c0e3fbc/Untitled.png)
+![Untitled](image/Untitled2.png)
 
 ### 실행결과
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e95c42dc-313f-4f4c-b7c7-e4e32f0dbb9b/038dc1f0-e5dc-493b-bf3e-e03c5a8914c7/Untitled.png)
+![Untitled](image/Untitled3.png)
 
 ### 소스파일
 
@@ -63,3 +63,16 @@ void Ram::write(int address, char value)
 ```
 
 Ram.h
+
+```cpp
+class Ram {
+	char mem[100 * 1024];
+	int size;
+public:
+	Ram();
+	~Ram();
+	char read(int address);
+	void write(int address, char value);
+
+};
+```
