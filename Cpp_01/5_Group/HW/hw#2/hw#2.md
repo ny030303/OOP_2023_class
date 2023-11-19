@@ -6,11 +6,11 @@
 
 ### 교제 p471 - 10번
 
-![Untitled](hw#2/Untitled.png)
+![Untitled](imgmd/Untitled.png)
 
 ### 폴더 구조
 
-![Untitled](hw#2/Untitled1.png)
+![Untitled](imgmd/Untitled1.png)
 
 ### 코드:
 
@@ -367,4 +367,4 @@ void Rect::draw() {
 
 결과:
 
-![Untitled](hw#2/Untitled2.png)
+![Untitled](imgmd/Untitled2.png)
