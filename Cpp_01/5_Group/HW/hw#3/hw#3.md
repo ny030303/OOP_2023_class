@@ -6,11 +6,11 @@
 
 ### 교제 p532 - 16번
 
-![Untitled](hw#3%2020355fa902334c2a8a4392c878d14c00/Untitled.png)
+![Untitled](img/Untitled.png)
 
 ### 폴더 구조
 
-![Untitled](hw#3%2020355fa902334c2a8a4392c878d14c00/Untitled%201.png)
+![Untitled]((img/Untitled%201.png)
 
 ### 코드:
 
@@ -158,4 +158,4 @@ void Circle::draw() {
 
 결과:
 
-![Untitled](hw#3%2020355fa902334c2a8a4392c878d14c00/Untitled%202.png)
+![Untitled]((img/Untitled%202.png)
