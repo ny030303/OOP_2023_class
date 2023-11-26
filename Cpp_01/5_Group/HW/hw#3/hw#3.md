@@ -10,7 +10,7 @@
 
 ### 폴더 구조
 
-![Untitled]((img/Untitled%201.png)
+![Untitled](img/Untitled%201.png)
 
 ### 코드:
 
@@ -158,4 +158,4 @@ void Circle::draw() {
 
 결과:
 
-![Untitled]((img/Untitled%202.png)
+![Untitled](img/Untitled%202.png)
